@@ -1,0 +1,57 @@
+/*The Python code defines functions to calculate average grade, assign letter grades, calculate GPA, and manage student grades by taking input, processing it, and displaying a grade report. */
+
+def calculate_average_grade(grades):
+    """Calculates the average grade from a list of grades."""
+    if not grades:
+        return 0
+    return sum(grades) / len(grades)
+
+def assign_letter_grade(average_grade):
+    """Assigns a letter grade based on the average grade."""
+    if average_grade >= 90:
+        return 'A'
+    elif average_grade >= 80:
+        return 'B'
+    elif average_grade >= 70:
+        return 'C'
+    elif average_grade >= 60:
+        return 'D'
+    else:
+        return 'F'
+
+def calculate_gpa(average_grade):
+    """Calculates the GPA based on the average grade."""
+    if average_grade >= 90:
+        return 4.0
+    elif average_grade >= 80:
+        return 3.0
+    elif average_grade >= 70:
+        return 2.0
+    elif average_grade >= 60:
+        return 1.0
+    else:
+        return 0.0
+
+def main():
+    """Main function to manage student grades."""
+    student_name = input("Enter student name: ")
+    num_subjects = int(input("Enter the number of subjects: "))
+
+    grades = []
+    for i in range(num_subjects):
+        subject_name = input(f"Enter the name of subject {i + 1}: ")
+        grade = float(input(f"Enter the grade for {subject_name}: "))
+        grades.append(grade)
+
+    average_grade = calculate_average_grade(grades)
+    letter_grade = assign_letter_grade(average_grade)
+    gpa = calculate_gpa(average_grade)
+
+    print("\n--- Student Grade Report ---")
+    print(f"Student Name: {student_name}")
+    print(f"Average Grade: {average_grade:.2f}")
+    print(f"Letter Grade: {letter_grade}")
+    print(f"GPA: {gpa:.2f}")
+
+if __name__ == "__main__":
+    main()
