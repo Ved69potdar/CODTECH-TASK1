@@ -2,11 +2,15 @@ Name: VEDANT POTDAR
 
 Company: CODTECH IT SOLUTIONS  
 ID: CT08DS456
+
 Domain: Python Programming
+
 Duration: december 05 2024 - January 05 2025
 Mentor: Neela Kumar
+
 Name of the project:
 Student Grade Management System - A Python-based application for tracking and calculating student academic performance metrics.
+
 ![Screenshot 2024-12-29 151400](https://github.com/user-attachments/assets/2cf8acd6-025c-4a8a-8ed5-51548573e13b)
 
 Objective:
